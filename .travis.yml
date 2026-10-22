@@ -1,5 +1,7 @@
 language: python
 
+dist: jammy
+
 python:
   - "3.12"
 
