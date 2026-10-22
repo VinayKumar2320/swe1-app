@@ -1,3 +1,6 @@
-from django.test import TestCase
+from django.test import SimpleTestCase
 
-# Create your tests here.
+
+class BasicTests(SimpleTestCase):
+    def test_basic_assertion(self):
+        self.assertEqual(1 + 1, 2)
