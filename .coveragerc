@@ -1,0 +1,9 @@
+[run]
+source = polls
+omit =
+    */migrations/*
+    */tests.py
+
+[report]
+show_missing = True
+skip_empty = True
