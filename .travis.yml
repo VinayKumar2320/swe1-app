@@ -18,3 +18,14 @@ script:
 
 after_success:
   - coveralls
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-2
+  app: swe1-app
+  env: swe1-app-env
+  bucket_name: elasticbeanstalk-us-east-2-203842201189
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  on:
+    branch: main
+    condition: "$TRAVIS_PULL_REQUEST = false"
